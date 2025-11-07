@@ -20,7 +20,7 @@
         stage('Run Container') {
             steps {
                 script {
-                    dockerImage.run()
+                    dockerImage.run('-d -p 5000:5000')
                     echo 'Container created'
                 }
             }
